@@ -1,0 +1,11 @@
+1. Xử lý mail để người dùng nhận thông báo ( file newsletter.php)
+2. Order tại file menu.php bằng cách thêm button Add to cart vào mỗi
+    món ăn.
+3. Tạo giỏ hàng , xử lý đơn hàng ( kiểm tra tính đúng đắn dữ liệu người dùng
+    cung cấp)
+    Thêm thông báo đặt hàng thành công khi nhấn thanh toán
+4. Xử lý Admin tổng:     
+    Quản lý menu ( thêm sửa xóa món ăn)
+    Xử lý đơn hàng
+**Hỏi thầy phân quyền là sao ???
+**Hỏi thầy cách liên kết database ???
