@@ -64,6 +64,19 @@
             case 'thanhtoan':
                 include("template/thanhtoan.php");
                 break;    
+            case 'timkiem':
+                '
+                <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+                <link rel="stylesheet" href="./reset.css">
+                <link rel="stylesheet" href="./globalStyles.css">
+                <link rel="stylesheet" href="./components.css">
+                <!-- aos library css  -->
+                <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+                <!-- Add your custom css -->
+                <link rel="stylesheet" href="./menu.css">
+                ';
+                include("search.php");
+                break;  
         }
     }
     else{

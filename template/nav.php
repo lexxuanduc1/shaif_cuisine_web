@@ -1,3 +1,6 @@
+<?php
+ob_start()
+?>
 <div class="nav">
         <div class="container">
             <div class="nav__wrapper">
@@ -21,7 +24,6 @@
               </svg>
                         </div>
                         <div class="nav__list__wrapper">
-
                             <li><a class="nav__link" href="index.php?chon=t&id=home">Home</a></li>
                             <li><a class="nav__link" href="index.php?chon=t&id=menu">Menu</a></li>
                             <li><a class="nav__link" href="index.php?chon=t&id=about">About</a></li>

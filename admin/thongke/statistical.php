@@ -3,7 +3,6 @@
         ?>
         <script>
             alert("bạn chưa được cấp quyền vào trang này!!!");
-            console.log("cai deo gi z");
             history.back();
         </script>
         <?php

@@ -36,8 +36,8 @@
         <th>Subtotal</th>
     </tr>
 <?php
-    include("./class/cart.php");
-    $cart = new cart();
+    // include("./class/cart.php");
+    // $cart = new cart();
 
     if (isset($_GET['thanhtoan']) && $_GET['thanhtoan'] == 1) {
         $tongtien = 0;

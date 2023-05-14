@@ -84,7 +84,7 @@ if(Session::get('user')==true){
     <!-- Add your custom css -->
     <link rel="stylesheet" href="./home.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css">
 </head>
 
 <body>
@@ -93,7 +93,28 @@ if(Session::get('user')==true){
         include("template/nav.php");
     ?>
     <!-- End Nav Section -->
+<!------------------------------------ Form tìm kiếm ------------------------ -->
+<div class="newsletter__form" style="margin-left: 5%; width: 50%;">
+    <form action="index.php" method="GET">
+        <label for="keyword">
+            <input type="text" name="q" id="search-input" placeholder="Tìm kiếm sản phẩm" value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>">
+        </label>
+        <button type="submit" name="search">Tìm kiếm</button>
+    </form>
+</div>
 
+<?php 
+    if (isset($_GET['search'])) {
+        $q = isset($_GET['q']) ? $_GET['q'] : "";
+        if ($q == "") {
+            echo "Vui lòng nhập tên món ăn bạn muốn tìm kiếm";
+        } else {
+            header('Location: index.php?chon=t&id=timkiem&q='. urlencode($q));
+        }
+    }
+?>
+    
+<!---------------------------------------------------------- ------------------------ -->
     <!--Content section-->
     <?php 
         include("template/maincontent.php");

@@ -1,11 +1,6 @@
 <?php
   if (!isset($_SESSION['role_id'])) {
-    ?>
-        <script>
-            alert("Bạn phải đăng nhập mới được mua hàng!!!");
-            history.back();
-        </script>
-        <?php
+        header('Location: index.php?chon=t&id=login');
         exit();
 }
 ?>
@@ -59,7 +54,7 @@
     <th></th>
   </tr>
 <?php
-      
+        
         if (isset($_SESSION['cart'])) {
             $i = 0;
             $tongtien = 0;
@@ -68,11 +63,10 @@
                 $tongtien += $thanhtien;//tinh tong tien
                 $i++;
     ?>
-
   <tr>
     <td><?php echo $i; ?></td>
     <td><?php echo $cart_item['tensanpham']; ?></td>
-    <td><img width='150px'><?php echo $cart_item['hinhanh'];?></td>
+    <td><img width='150px' src="./images/<?php echo $cart_item['hinhanh'];?>"></td>
     <td>
         <a href="./index.php?chon=t&id=xulycart&tru=<?php echo $cart_item['id']?>"><i class="fa fa-minus" aria-hidden="true"></i></a>
         <?php echo $cart_item['soluong']; ?>
@@ -94,9 +88,7 @@
                <?php
                
                ?>
-                
             </td>
-    
         </tr>
         <tr>
           <td colspan='8'><a style="font-size: 30px; color: black;" href="./index.php?chon=t&id=thanhtoan&thanhtoan=1"> Pay<a></td>
